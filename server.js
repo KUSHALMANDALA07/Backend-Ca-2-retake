@@ -17,7 +17,6 @@ app.put('/update-user', (req, res) => {
   if (!email || !password) {
     return res.status(400).json({ message: "Email and password are required." });
   }
-
   let userFound = false;
   users = users.map(user => {
     if (user.email === email) {
